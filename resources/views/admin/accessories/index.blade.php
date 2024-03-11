@@ -58,11 +58,14 @@
                                     <div class="table-action-buttons">
                                         <a class="view button button-box button-xs button-primary"
                                            href="invoice-details.html"><i class="zmdi zmdi-more"></i></a>
-                                        <a class="edit button button-box button-xs button-info" href="{{url
-                                        ('/admin/accessories/'.$accessory->id.'/edit')}}"><i
-                                                class="zmdi zmdi-edit"></i></a>
-                                        <a class="delete button button-box button-xs button-danger" href="#"><i
-                                                class="zmdi zmdi-delete"></i></a>
+
+                                        <form action="{{ route('admin.conflict-types.destroy', $conflictType->slug) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

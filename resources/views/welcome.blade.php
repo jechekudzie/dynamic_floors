@@ -21,13 +21,13 @@
                         <!-- SLIDE 1 -->
                         <li data-index="rs-70" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                             data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="300" data-thumb="{{asset('banners/DF Web2.png')}}"
+                            data-masterspeed="300" data-thumb="{{asset('banners/IMG_0038.JPG')}}"
                             data-rotate="0"
                             data-saveperformance="off" data-title="" data-param1="1" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                             data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="{{asset('banners/DF Web2.png')}}" data-bgcolor='rgba(255,255,255,0)'
+                            <img src="{{asset('banners/IMG_0038.JPG')}}" data-bgcolor='rgba(255,255,255,0)'
                                  style='' alt="" data-bgposition="center center" data-bgfit="cover" class="rev-slidebg"
                                  data-bgrepeat="no-repeat" data-bgparallax="off" data-no-retina>
 
@@ -108,12 +108,12 @@
                         <!-- SLIDE 1 -->
                         <li data-index="rs-71" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                             data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="300" data-thumb="{{asset('banners/DF Web1.png')}}" data-rotate="0"
+                            data-masterspeed="300" data-thumb="{{asset('banners/IIMG_0037.JPG')}}" data-rotate="0"
                             data-saveperformance="off" data-title="" data-param1="1" data-param2="" data-param3=""
                             data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
                             data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="{{asset('banners/DF Web1.png')}}" data-bgcolor='#ffffff' style='' alt=""
+                            <img src="{{asset('banners/IMG_0037.JPG')}}" data-bgcolor='#ffffff' style='' alt=""
                                  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                                  class="rev-slidebg" data-bgparallax="off" data-no-retina>
 

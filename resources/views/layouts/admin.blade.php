@@ -244,6 +244,7 @@
                     <li><a href="{{url('/admin/accessories')}}"> <span>Accessories</span></a></li>
                     <li><a href="{{url('/admin/profiles')}}"> <span>Profiles</span></a></li>
                     <li><a href="{{url('/admin/services')}}"> <span>Services</span></a></li>
+                    <li><a href="{{url('/admin/wall_decor')}}"> <span>Wall Decor</span></a></li>
                     <li class="has-sub-menu"><a href="#"><i class="ti-package"></i> <span>Products</span></a>
                         <ul class="side-header-sub-menu">
                             <li><a href="{{url('/admin/products')}}"><span>Products</span></a></li>

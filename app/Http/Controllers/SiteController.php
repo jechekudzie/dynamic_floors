@@ -9,6 +9,7 @@ use App\Models\FloorBrand;
 use App\Models\Profile;
 use App\Models\ProfileType;
 use App\Models\Service;
+use App\Models\WallDecor;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
@@ -65,6 +66,10 @@ class SiteController extends Controller
         $images = CleanerImage::paginate(6);
         $other_cleaners = Cleaner::all();
         return view('cleaners',compact('other_cleaners','cleaner','images'));
+    }
+    public function wallDecor(){
+        $wallDecors = WallDecor::all();
+        return view('wall_decor',compact('wallDecors'));
     }
 
 }

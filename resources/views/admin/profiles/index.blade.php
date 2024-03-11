@@ -63,8 +63,11 @@
                                         <a class="edit button button-box button-xs button-info" href="{{url
                                         ('/admin/profiles/'.$profile->id.'/edit')}}"><i
                                                 class="zmdi zmdi-edit"></i></a>
-                                        <a class="delete button button-box button-xs button-danger" href="#"><i
-                                                class="zmdi zmdi-delete"></i></a>
+                                        <form action="{{ url('/admin/profiles/'.$profile->id) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger zmdi zmdi-delete" title="Delete"></button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

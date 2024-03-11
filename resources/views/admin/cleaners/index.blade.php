@@ -53,13 +53,14 @@
                                 <td><a href="#">{{$cleaner->name}}</a></td>
                                 <td>
                                     <div class="table-action-buttons">
-                                        <a class="view button button-box button-xs button-primary"
-                                           href="invoice-details.html"><i class="zmdi zmdi-more"></i></a>
                                         <a class="edit button button-box button-xs button-info" href="{{url
                                         ('/admin/cleaners/'.$cleaner->id.'/edit')}}"><i
                                                 class="zmdi zmdi-edit"></i></a>
-                                        <a class="delete button button-box button-xs button-danger" href="#"><i
-                                                class="zmdi zmdi-delete"></i></a>
+                                        <form action="{{ url('/admin/cleaners/'.$cleaner->id) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger zmdi zmdi-delete" title="Delete"></button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

@@ -68,6 +68,7 @@
                                                 </ul>
                                             </li>
                                         @endforeach
+
                                         <li class="menu-item-has-children"><a href="#">Accessories</a>
                                             <ul class="sub-menu">
                                                 @foreach(\App\Models\ProfileType::where('id',6)->get() as  $profile_type)
@@ -79,6 +80,9 @@
                                                 <li><a href="{{url('/cleaners/1')}}">Cleaners</a></li>
                                                 <li><a href="#">Others</a></li>
                                             </ul>
+                                        </li>
+                                        <li style="background-color: #58181a;font-weight: bolder;">
+                                            <a style="margin-left: 10px;margin-right: 10px;" href="{{url('/wall_decor')}}"> WALL DECOR</a>
                                         </li>
 
                                         {{--<li><a href="{{url('/about')}}">About</a></li>
@@ -156,6 +160,9 @@
                                                     <li><a href="#">Others</a></li>
                                                 </ul>
                                             </li>
+                                            <li style="background-color: #58181a;font-weight: bolder;">
+                                                <a style="margin-left: 10px;margin-right: 10px;" href="{{url('/wall_decor')}}"> WALL DECOR</a>
+                                            </li>
 
                                             <li><a href="{{url('/contact')}}">Contact us</a></li>
                                         </ul>
@@ -199,10 +206,16 @@
                 </div>
                 <div class="side-panel-social">
                     <ul>
+
+                        <li><a href="https://www.facebook.com/dynamicfloorszim?mibextid=sCpJLy" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="http://tiktok.com/@dynamic.floors" target="_self"><i class="fab fa-tumblr"></i></a>
+                        </li>
+                        <li><a href="http://instagram.com/dynamicfloors7" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
                         <li><a href="http://twitter.com" target="_self"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="http://facebook.com" target="_self"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="http://linkedin.com" target="_self"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="http://instagram" target="_self"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="http://twitter.com" target="_self"><i class="fab fa-linkedin"></i></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -220,12 +233,14 @@
                         <p>.</p>
                         <div class="footer-social list-social">
                             <ul>
-                                <li><a href="http://facebook.com" target="_self"><i class="fab fa-facebook-f"></i></a>
-                                </li>
+                                <li><a href="https://www.facebook.com/dynamicfloorszim?mibextid=sCpJLy" target="_blank"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="http://tiktok.com/@dynamic.floors" target="_self"><i
+                                            class="fab fa-tumblr"></i></a></li>
+                                <li><a href="http://instagram.com/dynamicfloors7" target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
                                 <li><a href="http://twitter.com" target="_self"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="http://linkedin.com" target="_self"><i class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li><a href="http://instagram" target="_self"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="http://twitter.com" target="_self"><i class="fab fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -234,9 +249,9 @@
                     <div class="widget-footer">
                         <h6>Contact Us</h6>
                         <ul class="footer-list">
-                        
+
                             <li class="footer-list-item">
-                                 <h6>Highlands</h6>
+                                <h6>Highlands</h6>
                                 <span class="list-item-icon"><i class="ot-flaticon-place"></i></span>
                                 <span class="list-item-text">7 Acturus Road Highlands</span>
                             </li>
@@ -250,18 +265,18 @@
                             </li>
                         </ul>
                         <hr/>
-                        
+
                         <ul class="footer-list">
                             <li class="footer-list-item">
-                                  <h6>Mt Pleasant</h6>
+                                <h6>Mt Pleasant</h6>
                                 <span class="list-item-icon"><i class="ot-flaticon-place"></i></span>
                                 <span class="list-item-text">
-                                    Shop 1 & 2 Bond Shops Cnr The 
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chase & Bond Street Mt 
+                                    Shop 1 & 2 Bond Shops Cnr The
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chase & Bond Street Mt
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pleasant Harare
                                 </span>
                             </li>
-                        
+
                             <li class="footer-list-item">
                                 <span class="list-item-icon"><i class="ot-flaticon-phone-call"></i></span>
                                 <span class="list-item-text">+263 784588437</span>
@@ -359,26 +374,26 @@
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/629092f17b967b1179918596/1g42bs0h6';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/629092f17b967b1179918596/1g42bs0h6';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
 <!--End of Tawk.to Script-->
 <script
-   async
-   id="roomvoAssistant"
-   type="text/javascript"
-   data-locale="en-us"
-   data-position="bottom-left"
-   src="https://www.roomvo.com/static/scripts/b2b/common/assistant.js"
+    async
+    id="roomvoAssistant"
+    type="text/javascript"
+    data-locale="en-us"
+    data-position="bottom-left"
+    src="https://www.roomvo.com/static/scripts/b2b/common/assistant.js"
 >
-    
+
 </script>
 </body>
 </html>

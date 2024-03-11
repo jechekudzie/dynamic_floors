@@ -42,6 +42,7 @@ Route::get('/contact', 'SiteController@contact');
 
 
 Route::get('/services', 'SiteController@services');
+Route::get('/wall_decor', 'SiteController@wallDecor');
 
 
 /*
@@ -66,7 +67,6 @@ Route::resource('/admin/profiles', 'ProfilesController');
 Route::resource('/admin/products', 'ProductsController');
 Route::resource('/admin/colors', 'ColorsController');
 
-
 Route::get('/admin/floor_brands/{floor}/index', 'FloorBrandsController@index');
 Route::get('/admin/floor_brands/{floor}/create', 'FloorBrandsController@create');
 Route::post('/admin/floor_brands/{floor}/store', 'FloorBrandsController@store');
@@ -78,6 +78,17 @@ Route::get('/admin/products/{floorBrand}/create', 'ProductsController@create');
 Route::post('/admin/products/{floorBrand}/store', 'ProductsController@store');
 Route::get('/admin/products/{product}/edit', 'ProductsController@edit');
 Route::patch('/admin/products/{product}/update', 'ProductsController@update');
+
+//wall decor
+Route::resource('/admin/wall_decor', 'WallDecorController');
+
+Route::get('/admin/wall_decor_options/{wallDecor}/index', 'WallDecorOptionController@index');
+Route::get('/admin/wall_decor_options/{wallDecor}/create', 'WallDecorOptionController@create');
+Route::post('/admin/wall_decor_options/{wallDecor}/store', 'WallDecorOptionController@store');
+Route::get('/admin/wall_decor_options/{wallDecorOption}/edit', 'WallDecorOptionController@edit');
+Route::patch('/admin/wall_decor_options/{wallDecorOption}/update', 'WallDecorOptionController@update');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

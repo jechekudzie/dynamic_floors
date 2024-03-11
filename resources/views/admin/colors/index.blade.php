@@ -13,7 +13,7 @@
             <!-- Page Heading Start -->
             <div class="col-12 col-lg-auto mb-20">
                 <div class="page-heading">
-                    <h3>Brands</h3>
+                    <h3>Colors</h3>
                 </div>
             </div>
             <!-- Page Heading End -->
@@ -51,8 +51,11 @@
                                         <a class="edit button button-box button-xs button-info" href="{{url
                                         ('/admin/colors/'.$color->id.'/edit')}}"><i
                                                 class="zmdi zmdi-edit"></i></a>
-                                        <a class="delete button button-box button-xs button-danger" href="#"><i
-                                                class="zmdi zmdi-delete"></i></a>
+                                        <form action="{{ url('/admin/colors/'.$color->id) }}" method="POST" onsubmit="return confirm('Are you sure?');" style="display: inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger zmdi zmdi-delete" title="Delete"></button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
