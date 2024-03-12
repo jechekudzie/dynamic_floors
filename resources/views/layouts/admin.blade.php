@@ -193,24 +193,31 @@
                                             <img src="assets/images/avatar/avatar-1.jpg" alt="">
                                             <span class="status"></span>
                                             </span>
-                                            <span class="name">Admin</span>
+                                            <span class="name">@if(auth()->check()) {{auth()->user()->name}} @endif</span>
                                             </span>
                                     </a>
 
                                     <!-- Dropdown -->
                                     <div class="adomx-dropdown-menu dropdown-menu-user">
                                         <div class="head">
-                                            <h5 class="name"><a href="#">Admin</a></h5>
+                                            <h5 class="name"><a href="#">@if(auth()->check()) {{auth()->user()->name}} @endif</a></h5>
                                         </div>
                                         <div class="body">
-                                            <ul>
-                                                <li><a href="#"><i class="zmdi zmdi-account"></i>Profile</a></li>
-                                                <li><a href="#"><i class="zmdi zmdi-email-open"></i>Inbox</a></li>
-                                                <li><a href="#"><i class="zmdi zmdi-wallpaper"></i>Activity</a></li>
-                                            </ul>
+
                                             <ul>
                                                 <li><a href="#"><i class="zmdi zmdi-settings"></i>Setting</a></li>
-                                                <li><a href="#"><i class="zmdi zmdi-lock-open"></i>Sing out</a></li>
+
+
+                                                <li>
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        @csrf
+                                                    <a href="route('logout')"
+                                                       onclick="event.preventDefault();
+                                                this.closest('form').submit();"><i class="zmdi zmdi-lock-open"></i>Sing out</a>
+                                                    </form>
+                                                </li>
+
+
                                             </ul>
                                         </div>
                                     </div>

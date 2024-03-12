@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <section style="margin-top: -40px; background-color: #c1613f" class="">
+    <section style="margin-top: -40px; background-color: #58181a" class="">
         <div class="container">
             <div class="col-lg-12 col-md-12">
                 <h1 style="color: white;text-align: justify">WALL DECOR</h1>
