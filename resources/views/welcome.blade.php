@@ -1,6 +1,87 @@
 @extends('layouts.site')
 
 @section('content')
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        @media only screen and (min-width: 300px) and (max-width: 500px) {
+            .swiper-container {
+                /* Ensure the swiper container is not adding extra height */
+                height: 300px;
+            }
+
+            .swiper-slide {
+                /* Adjust the min-height or remove it entirely for mobile */
+                min-height: 300px; /* Adjusted height for mobile */
+                /* Other properties */
+            }
+
+            .swiper-slide img {
+                /* Update or ensure these styles are suitable for mobile */
+               width: 100%; /* Full width of the slider */
+                height: 600px; /* Maintain aspect ratio */
+                object-fit: contain; /* Cover the slide area, may crop the image */
+                object-position: center;
+                /* Other properties */
+                margin-top: 100px;
+                margin-bottom: -80px;
+            }
+
+            /* Adjust the position of the caption for mobile if necessary */
+            .caption {
+                /* Update or ensure these styles are suitable for mobile */
+                /* Other properties */
+            }
+
+            /* Inspect elements above the swiper container for extra space */
+            header, .site-header, .top-bar, .some-other-element {
+                margin-bottom: 0; /* Eliminate any margin that may push the slider down */
+                padding-top: 0; /* Eliminate any padding that may add space at the top */
+            }
+        }
+
+        /* Styles for laptops and larger screens */
+
+        /* Set the slides to fill the width and have a minimum height */
+        /* Set the slides to fill the width and have a desired minimum height */
+        .swiper-slide {
+            width: 100%;
+            min-height: 100%; /* Adjusted height: reduce as necessary */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The rest of your styles remain the same */
+
+
+        /* Ensure images fill the width and maintain their aspect ratio without being cropped */
+        .swiper-slide img {
+            width: 100%; /* Fill the width */
+           height: 1280px; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the area of the slide; this can result in cropping if the aspect ratio is different */
+            object-position: center; /* Center the image within the slide */
+        }
+
+        /* Center the caption over the image */
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px; /* Optional: rounds the corners of the caption background */
+        }
+
+    </style>
 
     <div id="content" class="site-content">
         <div class="p-0">
@@ -12,188 +93,28 @@
                 <span class="g-line-vertical line-right color-line-secondary"></span>
             </div>
 
-            <div id="rev_slider_one_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase"
-                 data-source="gallery">
-                <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
-                <div id="rev_slider_one" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
-                    <ul>
-
-                        <!-- SLIDE 1 -->
-                        <li data-index="rs-70" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="300" data-thumb="{{asset('banners/IMG_0038.JPG')}}"
-                            data-rotate="0"
-                            data-saveperformance="off" data-title="" data-param1="1" data-param2="" data-param3=""
-                            data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
-                            data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="{{asset('banners/IMG_0038.JPG')}}" data-bgcolor='rgba(255,255,255,0)'
-                                 style='' alt="" data-bgposition="center center" data-bgfit="cover" class="rev-slidebg"
-                                 data-bgrepeat="no-repeat" data-bgparallax="off" data-no-retina>
-
-                            <!-- LAYER 1  right image overlay dark-->
-
-                            <!-- LAYER 4  Bold Title-->
-                            <div class="tp-caption tp-resizeme tp-caption-main"
-                                 id="slide-70-layer-2"
-                                 data-x="['center','center','center','center']" data-hoffset="['2','0','0','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['-56','-63','-60','-65']"
-                                 data-fontsize="['93','72','55','40']"
-                                 data-lineheight="['83','70','51','55']"
-                                 data-color="['#fff','#fff','#fff','#fff']"
-                                 data-fontweight="['200','200','200','200']"
-                                 data-whitespace="nowrap"
-
-                                 data-type="text"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":900,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['left','left','left','left']"
-
-                                 style="color: #c1613f;">Explore The Possibilities
-                            </div>
-
-                            <!-- LAYER 5  Paragraph-->
-                            <div class="tp-caption tp-resizeme tp-desc"
-                                 id="slide-70-layer-3"
-                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['54','43','31','15']"
-                                 data-fontsize="['19','18','17','16']"
-                                 data-lineheight="['33','27','28','24']"
-                                 data-width="['818','630','500','417']"
-                                 data-weight="['500','500','500','500']"
-                                 data-color="['#fff','#fff','#fff','#fff']"
-                                 data-whitespace="normal"
-
-                                 data-type="text"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":1200,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['center','center','center','center']"
-
-                            >{{--We pride ourselves on being builders — creating architectural and creative solutions to
-                                help people realize their vision and make them a reality. Wanna work with us?--}}
-                            </div>
-
-                            <!--  Read More-->
-                            <div class="tp-caption rev-btn"
-                                 id="slide-70-layer-4"
-                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['170','140','119','110']"
-                                 data-fontsize="['13','18','17','0']"
-                                 data-lineheight="['25','18','16','16']"
-                                 data-width="none"
-                                 data-height="none"
-                                 data-whitespace="nowrap"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['center','center','center','center']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-
-                            ><a href="{{url('/about')}}" class="octf-btn octf-btn-primary btn-slider btn-large">Read
-                                    More
-                                </a>
-                            </div>
-
-                        </li>
-
-
-                        <!-- SLIDE 1 -->
-                        <li data-index="rs-71" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="300" data-thumb="{{asset('banners/IIMG_0037.JPG')}}" data-rotate="0"
-                            data-saveperformance="off" data-title="" data-param1="1" data-param2="" data-param3=""
-                            data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9=""
-                            data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="{{asset('banners/IMG_0037.JPG')}}" data-bgcolor='#ffffff' style='' alt=""
-                                 data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
-                                 class="rev-slidebg" data-bgparallax="off" data-no-retina>
-
-
-                            <!-- LAYER 3  Thin text title-->
-                            <div class="tp-caption tp-resizeme tp-caption-big"
-                                 id="slide-71-layer-1"
-                                 data-x="['center','center','center','center']" data-hoffset="['56','46','34','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['-64','-72','-65','-50']"
-                                 data-fontsize="['206',150','0','0']"
-                                 data-lineheight="['206','170','127','80']"
-                                 data-letterspacing="['104','85','63','39']"
-                                 data-fontweight="['900','900','900','900']"
-                                 data-color="['transparent','transparent','transparent','transparent']"
-                                 data-whitespace="nowrap"
-
-                                 data-type="text"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":500,"frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['center','center','center','center']"
-
-                            >
-                            </div>
-
-                            <!-- LAYER 4  Bold Title-->
-                            <div class="tp-caption tp-resizeme tp-caption-main"
-                                 id="slide-71-layer-2"
-                                 data-x="['center','center','center','center']" data-hoffset="['2','0','0','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['-56','-63','-60','-65']"
-                                 data-fontsize="['93','72','55','40']"
-                                 data-lineheight="['83','70','51','55']"
-                                 data-color="['#000000','#000000','#000000','#000000']"
-                                 data-fontweight="['200','200','200','200']"
-                                 data-whitespace="nowrap"
-
-                                 data-type="text"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":900,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['left','left','left','left']"
-
-                                 >
-                                Explore The Possibilities
-                            </div>
-
-                            <!-- Read More-->
-                            <div class="tp-caption rev-btn"
-                                 id="slide-71-layer-4"
-                                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                 data-y="['center','center','center','center']" data-voffset="['170','140','119','110']"
-                                 data-fontsize="['13','18','17','0']"
-                                 data-lineheight="['25','18','16','16']"
-                                 data-width="none"
-                                 data-height="none"
-                                 data-whitespace="nowrap"
-                                 data-responsive_offset="on"
-
-                                 data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:50px;opacity:0;","ease":"power3.inOut"}]'
-
-                                 data-textAlign="['center','center','center','center']"
-                                 data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]"
-                                 data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]"
-
-                            ><a href="{{url('/about')}}" class="octf-btn octf-btn-primary btn-slider
-                            btn-large">Read More</a>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <div class="tp-bannertimer"></div>
-
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img {{--style="margin-bottom: -100px"--}} class="img-fluid" src="{{asset('banners/b1.JPG')}}" alt="Image 1">
+                       {{-- <div class="caption">--}}{{--Caption for Image 1--}}{{--</div>--}}
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="{{asset('banners/IMG_0037.JPG')}}" alt="Image 2">
+                      {{--  <div class="caption">--}}{{--Caption for Image 2--}}{{--</div>--}}
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="{{asset('banners/IMG_0025.JPG')}}" alt="Image 2">
+                      {{--  <div class="caption">--}}{{--Caption for Image 2--}}{{--</div>--}}
+                    </div>
+                    <!-- ... more slides with captions -->
                 </div>
+                <!-- ... pagination, navigation, scrollbar if needed -->
             </div>
-            <div style="background-color: #58181a;" class="banner-desc-1">
+
+
+            <div style="background-color: #58181a;padding-top: 10px;padding-bottom: 10px;" class="banner-desc-1">
                 <ul>
                     <li><a href="#"><span>pinterest</span></a></li>
                     <li><a href="#"><span>twitter</span></a></li>
@@ -369,5 +290,31 @@
 
 
     </div>
+    <script>
+        var mySwiper = new Swiper ('.mySwiper', {
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false,
+            },
+
+            // If you want navigation buttons
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // If you want pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // And if you need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+    </script>
 
 @endsection
